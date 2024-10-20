@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    height: 158vh;
+    color: white;
+}
+
+
+/* Ajustes al contenedor principal */
+.container {
+    text-align: center;
+    position: relative;
+    margin-top: 20px; /* Puedes ajustar el margen si deseas que no esté tan pegado a la barra de navegación */
+}
+
+/* Ajustes a la caja principal del formulario */
+.main-container {
+    background: #2c2c2c77;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    height: 56rem;
+    margin-top: 28rem;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Alinear horizontalmente al centro */
+    justify-content: center; /* Alinear verticalmente */
+    gap: 10px; /* Espacio entre la imagen y el h1 */
+}
+
+.logo {
+    width: 100px; /* Ajusta el tamaño de la imagen si es necesario */
+    border-radius: 20px;
+    animation: bounce 2s infinite;
+}
+
+.encabezado h1 {
+    font-size: 2em;
+    color: #fff;
+    font-weight: 950;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; /* Asegúrate de que el texto esté centrado */
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-right: 05%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 950;
+    font-family: Arial, Helvetica, sans-serif;/* Color azul */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #00aeedd3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+    text-decoration: none; /* Para los enlaces con apariencia de botón */
+    display: inline-block; /* Para los enlaces con apariencia de botón */
+}
+
+.btn:hover {
+    background-color: #007bb5;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .main-container {
+        padding: 30px;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    .encabezado h1 {
+        font-size: 2em;
+    }
+
+    .form-group input {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .encabezado h1 {
+        font-size: 1.5em;
+    }
+
+    .form-group input {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .encabezado h1 {
+        font-size: 1.2em;
+    }
+
+    .form-group input {
+        font-size: 0.7em;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .main-container {
+        padding: 10px;
+        width: 20rem;
+        height: 54rem;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    img {
+        margin-top: 2rem;
+    }
+
+    .encabezado h1 {
+        font-size: 2em;
+        margin-top: 0rem;
+    }
+
+    .form-group input {
+        font-size: 0.7em;
+    }
+
+    .btn-nav-1 {
+        margin-bottom: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .btn-nav-2{
+        margin-left: 1rem;
+    }
+
+    .alargar {
+        width: 18.5rem !important;
+    }
+}
+
+input[type="date"]{
+    background-color: #fff;
+    padding: 15px;
+    /* position: absolute; */
+    /* transform: translate(-50%,-50%); */
+    /* top: 50%; */
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: #fff;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000 transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 5px;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    background-color: #ffff;
+    color: #42a5f5;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+nav button {
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #1e88e5;
+}
